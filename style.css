@@ -3,12 +3,24 @@
     margin: 0;
     padding: 0;
 }
-
+/* colors:
+    blue: #0284c7
+    orange: #bb432c
+    main-dark: #262729
+    option-dark: #222327
+     */
 body {
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
+    background-color: #222327;
     font-family: 'Nunito', sans-serif;
+    color: #ecf0f1;
 }
-
+.orange{
+    color: #bb432c;
+}
+.blue {
+    color: #0284c7;
+}
 .container {
     height: 100vh;
     display: grid;
@@ -21,14 +33,12 @@ body {
     grid-row: 1;
     grid-column: 1;
     font-size: 25px;
-    background-color: #3498db;
+    background-color: #262729;
     padding: 1vmax;
-    box-shadow: 1px 1px 3px black;
     border-bottom-right-radius: 4px;
 }
 
 .user-info {
-    color: #ecf0f1;
     display: inline-block;
     vertical-align: middle;
 }
@@ -47,9 +57,7 @@ body {
     grid-column: 1 / 3;
     font-size: 1.5vmax;
     text-align: left;
-    color: #2c3e50;
     padding: 1vmax;
-    font-family: 'Indie Flower', cursive;
 }
 
 .quote-container>p {
@@ -68,11 +76,9 @@ body {
 .friends {
     grid-row: 3;
     grid-column: 3;
-    background-color: #3498db;
+    background-color: #262729;
     font-size: 1.5vmax;
-    color: #ecf0f1;
     border-top-left-radius: 4px;
-    box-shadow: -1px -1px 3px black;
     padding-left: 1vmax;
 }
 
@@ -90,10 +96,20 @@ button {
     width: 200px;
     height: 50px;
     border-radius: 6px;
-    background-color: #27ae60;
-    color: #ecf0f1;
+    /* background-color: #27ae60; */
     font-size: 1vmax;
     cursor: pointer;
+    background-color: #262729 ;
+    border: 3px solid #bb432c;
+    color: #bb432c;
+}
+button:hover {
+    background-color: #bb432c;
+    color: #262729;
+}
+button:active {
+    background-color: #0284c7;
+    border: 3px solid #0284c7;
 }
 
 #gen-page:focus {
@@ -119,7 +135,7 @@ button {
     grid-template-columns: minmax(150px, 150px) minmax(200px, 400px);
     align-items: center;
     justify-self: baseline;
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid #bb432c;
 }
 
 .meat-text {

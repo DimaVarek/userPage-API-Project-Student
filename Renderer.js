@@ -1,3 +1,28 @@
+const colorTypes = {
+    normal: "#222327",
+    fighting: "red",
+    flying: "white",
+    poison: "yellowgreen",
+    ground: "brown",
+    rock: "gray",
+    bug: "greenyellow",
+    ghost: "lightgray",
+    steel: "gainsboro",
+    fire: 'orange',
+    water: 'blue',
+    grass: "green",
+    electric: "yellow",
+    psychic: "blueviolet",
+    ice: 'aqua',
+    dragon: "orangered",
+    dark: 'black',
+    fairy: 'pink',
+    unknown: 'transparent',
+    shadow: "lightblue"
+
+
+}
+
 class Renderer {
     constructor () {
         this.userInfoTemplate = Handlebars.compile($('#user-container-template').html());
@@ -27,6 +52,7 @@ class Renderer {
     renderPokemon (pokemon) {
         $('.pokemon-container').empty()
         pokemon.name = pokemon.name[0].toUpperCase()+ pokemon.name.slice(1)
+        $('.pokemon-container').css('background-color', colorTypes[pokemon.type])
         const newHTML = this.pokemonTemplate(pokemon)
         $('.pokemon-container').append(newHTML)
     }

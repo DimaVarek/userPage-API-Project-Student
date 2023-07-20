@@ -13,6 +13,14 @@ class Person {
         this.picture = ""
     }
 }
+class Pokemon {
+    constructor () {
+        this.name = ""
+        this.picture = ""
+        this.pokemonGif = ""
+        this.type = ""
+    }
+}
 
 class APIManager {
     constructor() {
@@ -20,11 +28,7 @@ class APIManager {
             mainUser: new Person,
             friends: [],
             quote: "",
-            pokemon: {
-                name: "",
-                picture: "",
-                pokemonGif: ""
-            },
+            pokemon: new Pokemon,
             aboutMe: ""
         }        
     }
@@ -68,6 +72,7 @@ class APIManager {
         this.data.pokemon.name = randomPokemon.name
         let image = randomPokemon.sprites.versions['generation-v']['black-white'].animated.front_default
         this.data.pokemon.picture = image ? image : randomPokemon.sprites.front_default
+        this.data.pokemon.type = randomPokemon.types[0].type.name
     }
     async _randomAboutMeRequest() {
         let randomAboutMe = await $.get('https://baconipsum.com/api/?type=all-meat&paras=1')

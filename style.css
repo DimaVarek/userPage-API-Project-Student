@@ -144,7 +144,9 @@ button:active {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-self: baseline;
-    border-bottom: 1px solid #bb432c;
+    border: 3px solid #bb432c;
+    border-radius: 6px;
+    margin-left: 1vmax;
 }
 
 .meat-text {

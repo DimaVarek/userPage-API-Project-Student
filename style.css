@@ -117,8 +117,8 @@ button:active {
 }
 
 #pokemon-image {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: inline-block;
     background-size: 100%;
     justify-self: center;
@@ -126,13 +126,22 @@ button:active {
 
 #pokemon-text {
     vertical-align: middle;
+    display: inline-block;
+}
+#pokemon-image-2 {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-size: 100%;
+    justify-self: center;
 }
 
 .pokemon-container {
     font-size: 20px;
     padding: 1vw;
     display: grid;
-    grid-template-columns: minmax(150px, 150px) minmax(200px, 400px);
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-self: baseline;
     border-bottom: 1px solid #bb432c;
